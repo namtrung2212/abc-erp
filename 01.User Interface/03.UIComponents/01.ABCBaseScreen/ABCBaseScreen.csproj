@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3C5C7044-08E5-415D-86A5-675079202B3B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ABCBaseScreen</RootNamespace>
+    <AssemblyName>ABCBaseScreen</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ABCSkinBLue">
+      <HintPath>..\LIB\ABCSkinBLue.dll</HintPath>
+    </Reference>
+    <Reference Include="BaseObjects, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\ObjectLibs\BaseObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="BusinessObjects, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\ObjectLibs\BusinessObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v12.1.Core, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v12.1.Core, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v12.1.Core, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseScreen\ABCScreenManager.cs" />
+    <Compile Include="BaseReport\ABCBaseReport.cs" />
+    <Compile Include="BaseScreen\ABCScreenFactory.cs" />
+    <Compile Include="BaseScreen\UI\Views\ABCSelectionView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseScreen\UI\Views\ABCRelationChooser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseScreen\ABCBaseScreen.cs" />
+    <Compile Include="BaseScreen\Data\DataManager.cs" />
+    <Compile Include="BaseScreen\Data\ABCList.cs" />
+    <Compile Include="BaseScreen\UI\UIManager.cs" />
+    <Compile Include="BaseScreen\UI\Views\ABCSearchView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseReport\ABCReportFactory.cs" />
+    <Compile Include="Splash\ERP\ABCERPSplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Splash\ERP\ABCERPSplashScreen.Designer.cs">
+      <DependentUpon>ABCERPSplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Splash\ERP\ParentERPSplash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Splash\ERP\ParentERPSplash.Designer.cs">
+      <DependentUpon>ParentERPSplash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Splash\SplashUtils.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Splash\Studio\ABCStudioSplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Splash\Studio\ABCStudioSplashScreen.Designer.cs">
+      <DependentUpon>ABCStudioSplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Splash\Studio\ParentStudioSplash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Splash\Studio\ParentStudioSplash.Designer.cs">
+      <DependentUpon>ParentStudioSplash.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BaseScreen\UI\Views\ABCSearchView.resx">
+      <DependentUpon>ABCSearchView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseScreen\UI\Views\ABCSelectionView.resx">
+      <DependentUpon>ABCSelectionView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseScreen\UI\Views\ABCRelationChooser.resx">
+      <DependentUpon>ABCRelationChooser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Splash\ERP\ABCERPSplashScreen.resx">
+      <DependentUpon>ABCERPSplashScreen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Splash\ERP\ParentERPSplash.resx">
+      <DependentUpon>ParentERPSplash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Splash\Studio\ABCStudioSplashScreen.resx">
+      <DependentUpon>ABCStudioSplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Splash\Studio\ParentStudioSplash.resx">
+      <DependentUpon>ParentStudioSplash.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\02.Business Entities\02.ABCSystemProviders\ABCSystemProviders.csproj">
+      <Project>{2EB9BBFE-E7DD-4508-A9B6-0D925A33EDE5}</Project>
+      <Name>ABCSystemProviders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\03.Data Access Layer\01.ABCDataLib\ABCDataLib.csproj">
+      <Project>{451842EF-D089-4946-9A9E-D5B3A25C6DAA}</Project>
+      <Name>ABCDataLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\02.ABCControls\ABCControls.csproj">
+      <Project>{58D58648-6D89-4904-9019-F7FDD300D3DE}</Project>
+      <Name>ABCControls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\04.Common\ABCCommon.csproj">
+      <Project>{860C1351-AF97-434E-828D-A9972E533839}</Project>
+      <Name>ABCCommon</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\package_graphics.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-reports.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

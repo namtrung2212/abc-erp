@@ -1,0 +1,799 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{58D58648-6D89-4904-9019-F7FDD300D3DE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ABCControls</RootNamespace>
+    <AssemblyName>ABCControls</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BaseObjects, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ObjectLibs\BaseObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="BusinessObjects">
+      <HintPath>..\..\..\ObjectLibs\BusinessObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v12.1.Core, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Design.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Office.v12.1.Core, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v12.1.Core, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v12.1.Core, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Reports.v12.1.Designer, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v12.1.Core, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v12.1.Design, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v12.1.Design, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v12.1.Extensions, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v12.1.UI, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v12.1.Design, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v12.1.Design, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v12.1.Design, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v12.1.Design, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v12.1.Design, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v12.1.Design, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v12.1.Design, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v12.1.Extensions, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v12.1.Design, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v12.1.Extensions, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v12.1.Printing, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v12.1.Design, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraVerticalGrid.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraVerticalGrid.v12.1.Design, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ICSharpCode.NRefactory">
+      <HintPath>..\LIB\NFactory\ICSharpCode.NRefactory.dll</HintPath>
+    </Reference>
+    <Reference Include="ScintillaNet">
+      <HintPath>..\LIB\ScintillaNet.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Design">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing.Design">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Commons\Forms\ComponentListEditor.cs" />
+    <Compile Include="Commons\Forms\SQLScriptEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Commons\Forms\SQLScriptEditorForm.Designer.cs">
+      <DependentUpon>SQLScriptEditorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI.Caching\UICaching.cs" />
+    <Compile Include="UI.Components\ABCControlDesigner.cs" />
+    <Compile Include="UI.Components\UI.Components.Binables\ABCCheckPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\ABCCheckPanel.Designer.cs">
+      <DependentUpon>ABCCheckPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\ABCMonthYearEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\ABCMonthYearEdit.Designer.cs">
+      <DependentUpon>ABCMonthYearEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\ABCPrintingReview.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\ABCPrintingReview.Designer.cs">
+      <DependentUpon>ABCPrintingReview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\ABCPeriodEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\ABCPeriodEdit.Designer.cs">
+      <DependentUpon>ABCPeriodEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\ObjectInformation\ABCComment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\ObjectInformation\ABCComment.Designer.cs">
+      <DependentUpon>ABCComment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\ABCSpinEdit2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\Chart\ABCChartPieControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\Chart\Base\ABCChartBaseControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\Chart\Base\ABCChartOneSeriesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\Chart\Base\ABCChartBaseSeries.cs" />
+    <Compile Include="UI.Components\UI.Components.Binables\Chart\ABCChartBarControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\Chart\ABCChartLineControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\Chart\ABCChartSplineControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\Chart\Base\ABCChartTwoSeriesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\Chart\Base\ABCChartThreeSeriesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\Chart\Base\ABCChartFourSeriesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\Chart\Base\ABCChartFiveSeriesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\Chart\Base\ABCChartSixSeriesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\Chart\Series\ABCChartPieSeries.cs" />
+    <Compile Include="UI.Components\UI.Components.Binables\Chart\Series\ABCChartBarSeries.cs" />
+    <Compile Include="UI.Components\UI.Components.Binables\Chart\Series\ABCChartLineSeries.cs" />
+    <Compile Include="UI.Components\UI.Components.Binables\Chart\Series\ABCChartSplineSeries.cs" />
+    <Compile Include="UI.Components\UI.Components.Binables\ABCMonthEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\ABCYearEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\ObjectInformation\ABCObjectInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\ObjectInformation\ABCObjectInformation.Designer.cs">
+      <DependentUpon>ABCObjectInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\ExtraControl\ABCBindingControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\ExtraControl\ABCBindingControl.Designer.cs">
+      <DependentUpon>ABCBindingControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\Grid\GridBandedControl\ABCGridBandedControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\Grid\GridBandedControl\ABCGridBandedControl.Designer.cs">
+      <DependentUpon>ABCGridBandedControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\Grid\ABCGridRowDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\Grid\ABCGridRowDetail.Designer.cs">
+      <DependentUpon>ABCGridRowDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\Grid\GridBandedControl\GridBandedColumnConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\Grid\GridBandedControl\GridBandedColumnConfigForm.Designer.cs">
+      <DependentUpon>GridBandedColumnConfigForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\Grid\GridBandedControl\GridBandedColumnEditor.cs" />
+    <Compile Include="Commons\Forms\SQLScriptEditor.cs" />
+    <Compile Include="UI.Components\UI.Components.Binables\Grid\GridControl\GridColumnConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\Grid\GridControl\GridColumnConfigForm.Designer.cs">
+      <DependentUpon>GridColumnConfigForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\Grid\IABCGridControl.cs" />
+    <Compile Include="UI.Components\UI.Components.Binables\Grid\PivotGridControl\ABCPivotGridChartControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\Grid\PivotGridControl\ABCPivotGridChartControl.Designer.cs">
+      <DependentUpon>ABCPivotGridChartControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\Grid\PivotGridControl\ABCPivotGridControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\Grid\PivotGridControl\ABCPivotGridControl.Designer.cs">
+      <DependentUpon>ABCPivotGridControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\Grid\PivotGridControl\PivotGridFieldConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\Grid\PivotGridControl\PivotGridFieldConfigForm.Designer.cs">
+      <DependentUpon>PivotGridFieldConfigForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\Grid\PivotGridControl\PivotGridFieldEditor.cs" />
+    <Compile Include="UI.Components\UI.Components.Binables\ABCRichEditControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\ABCRichEditControl.Designer.cs">
+      <DependentUpon>ABCRichEditControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\ObjectInformation\ABCLogging.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\ObjectInformation\ABCLogging.Designer.cs">
+      <DependentUpon>ABCLogging.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\ObjectInformation\ABCTagObject.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\ObjectInformation\ABCTagObject.Designer.cs">
+      <DependentUpon>ABCTagObject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\ObjectInformation\UserChooserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\ObjectInformation\UserChooserForm.Designer.cs">
+      <DependentUpon>UserChooserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Layouts\ABCFlowPanelControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI.Designer\RichTextEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI.Designer\RichTextEditorForm.Designer.cs">
+      <DependentUpon>RichTextEditorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\LookUpEdit\ABCLookupEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\Repositorys\ABCPopupGridLookUpEditForm.cs" />
+    <Compile Include="UI.Components\UI.Components.Binables\Repositorys\ABCRepositoryLookupEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\Repositorys\ABCRepositoryGridLookupEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\Treelist\ABCTreelist.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\Treelist\ABCTreelist.Designer.cs">
+      <DependentUpon>ABCTreelist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\Treelist\ABCTreelistManager.cs" />
+    <Compile Include="UI.Components\UI.Components.Binables\Treelist\TreeColumnConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\Treelist\TreeColumnConfigForm.Designer.cs">
+      <DependentUpon>TreeColumnConfigForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\Treelist\TreeColumnEditor.cs" />
+    <Compile Include="UI.Components\UI.Components.Panels\Components.Panels.BindPanel\ABCDataPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Panels\Components.Panels.Search\ABCDateTimeSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Panels\Components.Panels.Search\ABCDateTimeSearch.Designer.cs">
+      <DependentUpon>ABCDateTimeSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Panels\Components.Panels.Search\ABCSearchControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Panels\Components.Panels.Search\ABCSearchControl.Designer.cs">
+      <DependentUpon>ABCSearchControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Panels\Components.Panels.Search\ABCTextSearch.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Panels\Components.Panels.Search\ABCNumbSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Panels\Components.Panels.Search\ABCNumbSearch.Designer.cs">
+      <DependentUpon>ABCNumbSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Panels\Components.Panels.Search\ABCBoolSearch.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Panels\Components.Panels.Search\ABCGridLookUpEditSearch.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Panels\Components.Panels.Search\AutoSearchPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Panels\Components.Panels.Search\AutoSearchPanel.Designer.cs">
+      <DependentUpon>AutoSearchPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Panels\Components.Panels.Search\SearchPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Panels\Components.Panels.Search\SearchPanel.Designer.cs">
+      <DependentUpon>SearchPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI.Designer\ColumnChooserEditor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UI.Designer\RichTextEditor.cs" />
+    <Compile Include="UI.Designer\FieldChooserEx.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI.Designer\FieldChooserEx.Designer.cs">
+      <DependentUpon>FieldChooserEx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI.Designer\ColumnChooserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI.Designer\ColumnChooserForm.Designer.cs">
+      <DependentUpon>ColumnChooserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI.Designer\UI.Designer.Reports\XtraForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI.Designer\UI.Designer.Reports\XtraForm1.Designer.cs">
+      <DependentUpon>XtraForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI.Designer\UI.Designer.Reports\XtraReport1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI.Designer\UI.Designer.Reports\XtraReport1.Designer.cs">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI.Designer\TableChooserEditor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UI.Designer\TableChooserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI.Designer\TableChooserForm.Designer.cs">
+      <DependentUpon>TableChooserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI.ScreenConfig\ABCScreenConfig.cs" />
+    <Compile Include="UI.Designer\UI.Designer.Forms\HostControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI.Designer\UI.Designer.Forms\HostSurface.cs" />
+    <Compile Include="UI.Designer\UI.Designer.Forms\HostSurfaceManager.cs" />
+    <Compile Include="UI.Designer\UI.Designer.Forms\Loader\BasicHostLoader.cs" />
+    <Compile Include="UI.Designer\UI.Designer.Forms\Loader\CodeDomHostLoader.cs" />
+    <Compile Include="UI.Designer\UI.Designer.Forms\Loader\CodeGen.cs" />
+    <Compile Include="UI.Designer\UI.Designer.Forms\Loader\TypeResolutionService.cs" />
+    <Compile Include="UI.Designer\UI.Designer.Forms\UndoEngine.cs" />
+    <Compile Include="Commons\Forms\FilterBuilderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Commons\Forms\FilterBuilderForm.Designer.cs">
+      <DependentUpon>FilterBuilderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Commons\Forms\FilterConditionEditor.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI.Utils\ABCImageList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI.Utils\ABCImageList.Designer.cs">
+      <DependentUpon>ABCImageList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Layouts\ABCDockPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Views\ABCView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Views\ABCViewDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Views\ABCViewDlg.Designer.cs">
+      <DependentUpon>ABCViewDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Layouts\ABCGroupControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\ABCRadioGroup.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Layouts\ABCTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\ABCTextEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\ABCCalcEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\ABCMemoEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\ABCMemoExEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\ABCCheckEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\ABCCheckedListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Layouts\ABCSimpleButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Layouts\ABCButtonEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Layouts\ABCPanelControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\ABCLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\ABCRichTextEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\ABCSpinEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Layouts\ABCScrollableControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Layouts\ABCSplitterControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\ABCDateEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\ABCTimeEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\ABCComboBoxEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\LookUpEdit\ABCGridLookupEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Layouts\ABCCollapseGroupControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Layouts\ABCSplitterContainer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\Grid\GridControl\ABCGridControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\Grid\GridControl\ABCGridControl.Designer.cs">
+      <DependentUpon>ABCGridControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI.Components\UI.Components.Binables\Grid\GridControl\GridColumnEditor.cs" />
+    <Compile Include="UI.Components\IABCControl.cs" />
+    <Compile Include="UI.Utils\ABCPresentHelper.cs" />
+    <Compile Include="UI.ScreenConfig\BusinessConfigEditor.cs" />
+    <Compile Include="UI.ScreenConfig\BusinessConfigEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI.ScreenConfig\BusinessConfigEditorForm.Designer.cs">
+      <DependentUpon>BusinessConfigEditorForm.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Commons\Forms\SQLScriptEditorForm.resx">
+      <DependentUpon>SQLScriptEditorForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="UI.Components\UI.Components.Binables\ABCCheckPanel.resx">
+      <DependentUpon>ABCCheckPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI.Components\UI.Components.Binables\ABCMonthYearEdit.resx">
+      <DependentUpon>ABCMonthYearEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI.Components\UI.Components.Binables\ABCPrintingReview.resx">
+      <DependentUpon>ABCPrintingReview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI.Components\UI.Components.Binables\ABCPeriodEdit.resx">
+      <DependentUpon>ABCPeriodEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI.Components\UI.Components.Binables\ObjectInformation\ABCComment.resx">
+      <DependentUpon>ABCComment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI.Components\UI.Components.Binables\ObjectInformation\ABCObjectInformation.resx">
+      <DependentUpon>ABCObjectInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI.Components\UI.Components.Binables\ExtraControl\ABCBindingControl.resx">
+      <DependentUpon>ABCBindingControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI.Components\UI.Components.Binables\Grid\GridBandedControl\ABCGridBandedControl.resx">
+      <DependentUpon>ABCGridBandedControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI.Components\UI.Components.Binables\Grid\ABCGridRowDetail.resx">
+      <DependentUpon>ABCGridRowDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI.Components\UI.Components.Binables\Grid\GridBandedControl\GridBandedColumnConfigForm.resx">
+      <DependentUpon>GridBandedColumnConfigForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI.Components\UI.Components.Binables\Grid\GridControl\GridColumnConfigForm.resx">
+      <DependentUpon>GridColumnConfigForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI.Components\UI.Components.Binables\Grid\PivotGridControl\ABCPivotGridChartControl.resx">
+      <DependentUpon>ABCPivotGridChartControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI.Components\UI.Components.Binables\Grid\PivotGridControl\ABCPivotGridControl.resx">
+      <DependentUpon>ABCPivotGridControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI.Components\UI.Components.Binables\Grid\PivotGridControl\PivotGridFieldConfigForm.resx">
+      <DependentUpon>PivotGridFieldConfigForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI.Components\UI.Components.Binables\ABCRichEditControl.resx">
+      <DependentUpon>ABCRichEditControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI.Components\UI.Components.Binables\ObjectInformation\ABCLogging.resx">
+      <DependentUpon>ABCLogging.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI.Components\UI.Components.Binables\ObjectInformation\ABCTagObject.resx">
+      <DependentUpon>ABCTagObject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI.Components\UI.Components.Binables\ObjectInformation\UserChooserForm.resx">
+      <DependentUpon>UserChooserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI.Designer\RichTextEditorForm.resx">
+      <DependentUpon>RichTextEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI.Components\UI.Components.Binables\Treelist\ABCTreelist.resx">
+      <DependentUpon>ABCTreelist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI.Components\UI.Components.Binables\Treelist\TreeColumnConfigForm.resx">
+      <DependentUpon>TreeColumnConfigForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI.Components\UI.Components.Panels\Components.Panels.Search\ABCDateTimeSearch.resx">
+      <DependentUpon>ABCDateTimeSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI.Components\UI.Components.Panels\Components.Panels.Search\ABCSearchControl.resx">
+      <DependentUpon>ABCSearchControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI.Components\UI.Components.Panels\Components.Panels.Search\ABCNumbSearch.resx">
+      <DependentUpon>ABCNumbSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI.Components\UI.Components.Panels\Components.Panels.Search\AutoSearchPanel.resx">
+      <DependentUpon>AutoSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI.Components\UI.Components.Panels\Components.Panels.Search\SearchPanel.resx">
+      <DependentUpon>SearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI.Components\UI.Components.Views\ABCViewDlg.resx">
+      <DependentUpon>ABCViewDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI.Designer\FieldChooserEx.resx">
+      <DependentUpon>FieldChooserEx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI.Designer\ColumnChooserForm.resx">
+      <DependentUpon>ColumnChooserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI.Designer\UI.Designer.Reports\XtraForm1.resx">
+      <DependentUpon>XtraForm1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI.Designer\UI.Designer.Reports\XtraReport1.resx">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI.Designer\TableChooserForm.resx">
+      <DependentUpon>TableChooserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI.Designer\UI.Designer.Forms\HostControl.resx">
+      <DependentUpon>HostControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Commons\Forms\FilterBuilderForm.resx">
+      <DependentUpon>FilterBuilderForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI.Utils\ABCImageList.resx">
+      <DependentUpon>ABCImageList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI.Components\UI.Components.Views\ABCView.resx">
+      <DependentUpon>ABCView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI.Components\UI.Components.Binables\Grid\GridControl\ABCGridControl.resx">
+      <DependentUpon>ABCGridControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI.ScreenConfig\BusinessConfigEditorForm.resx">
+      <DependentUpon>BusinessConfigEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\02.Business Entities\02.ABCSystemProviders\ABCSystemProviders.csproj">
+      <Project>{2EB9BBFE-E7DD-4508-A9B6-0D925A33EDE5}</Project>
+      <Name>ABCSystemProviders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\03.Data Access Layer\01.ABCDataLib\ABCDataLib.csproj">
+      <Project>{451842EF-D089-4946-9A9E-D5B3A25C6DAA}</Project>
+      <Name>ABCDataLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\04.Common\ABCCommon.csproj">
+      <Project>{860C1351-AF97-434E-828D-A9972E533839}</Project>
+      <Name>ABCCommon</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
